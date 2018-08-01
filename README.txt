@@ -14,9 +14,3 @@ This will create a new file test_f2py.so wich is callable in any python script
     
     >>> from test_f2py import f_routine as corr_f
     >>> y = corr_f(x)
-
-
-WARNING:
-=======
-The imported function from the fortran library works the first time it's called.
-The second time it's called, the giver results are slightly wrong. Don't know why
