@@ -27,11 +27,14 @@ integer, intent(in) :: n_data
 real (kind=8), dimension(n_data), intent(out)  :: corr
 integer ,dimension(n_data) :: n_corr
 integer :: i,j
-real (kind=8) :: x_mean = 0, x_var = 0
-
+real (kind=8) :: x_mean, x_var! old x_mean = 0, x_var = 0; Don't do this: it saves the values for next call
+ 
 !Initailize Variables
 corr = 0.  
 n_corr = 0
+x_mean = 0.
+x_var = 0.
+
 
 do i=1,n_data
     x_mean = x_mean + x(i)
